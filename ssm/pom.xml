@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.fan</groupId>
 	<artifactId>ssm</artifactId>
@@ -17,10 +16,11 @@
 		<commons.collections.version>3.2.1</commons.collections.version>
 		<commons.beanutils.version>1.8.0</commons.beanutils.version>
 		<junit.version>4.8.2</junit.version>
-		<log4j.version>1.2.13</log4j.version>
+		<log4j.version>1.2.17</log4j.version>
 		<slf4j.version>1.6.0</slf4j.version>
 		<xmemchached.version>2.0.0</xmemchached.version>
 	</properties>
+
 
 	<dependencyManagement>
 		<dependencies>
@@ -28,31 +28,14 @@
 				<groupId>commons-logging</groupId>
 				<artifactId>commons-logging</artifactId>
 				<version>1.1.1</version>
-				<scope>provided</scope>
 			</dependency>
+			
 			<dependency>
 				<groupId>log4j</groupId>
 				<artifactId>log4j</artifactId>
 				<version>${log4j.version}</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>mail</artifactId>
-						<groupId>javax.mail</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>jms</artifactId>
-						<groupId>javax.jms</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>jmxtools</artifactId>
-						<groupId>com.sun.jdmk</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>jmxri</artifactId>
-						<groupId>com.sun.jmx</groupId>
-					</exclusion>
-				</exclusions>
 			</dependency>
+			
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>jcl-over-slf4j</artifactId>
@@ -191,5 +174,6 @@
 	<modules>
 		<module>ssm-core</module>
 		<module>ssm-admin</module>
-	</modules>
+    <module>ssm-common</module>
+  </modules>
 </project>

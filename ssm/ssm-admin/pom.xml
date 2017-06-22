@@ -112,9 +112,9 @@
 		<!-- JSTL标签库 -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
-			<scope>compile</scope>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
 		</dependency>
 		<!-- Spring 文件上传的包 -->
 		<dependency>
@@ -144,6 +144,11 @@
 			<artifactId>ssm-core</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.fan</groupId>
+			<artifactId>ssm-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 		<!-- JSON lib 开发包 以及它的依赖包 -->
 		<dependency>
 			<groupId>net.sf.json-lib</groupId>
@@ -155,7 +160,7 @@
 
 
 	<build>
-		<finalName>cpm</finalName>
+		<finalName>ssm-admin</finalName>
 		<plugins>
 			<!-- 设置 JDK1.7编译的版本 -->
 			<plugin>
